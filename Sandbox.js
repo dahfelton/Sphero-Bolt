@@ -6,12 +6,12 @@
 //Program URL: https://edu.sphero.com/program/16700411/edit
 
 async function startProgram() {
-	setMainLed({ r: 0, g: 0, b: 255 });
-	await speak("Hello Square", true);
+	setMainLed({ r: 255, g: 0, b: 255 });
+	await Sound.Effects.Laser.play(true);
+	await speak("Time to move", true);
 	await delay(1);
 	for (var _i1 = 0; _i1 < 4; _i1++) {
-		setMainLed(getRandomColor());
-		await Sound.Effects.Laser.play(true);
+		await strobe({ r: 255, g: 0, b: 255 }, (3 / 15) * 0.5, 15);
 		await roll((getHeading() + 90), 60, 1);
 		await delay(1);
 	}
