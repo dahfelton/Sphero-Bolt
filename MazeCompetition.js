@@ -6,10 +6,9 @@
 //Program URL: https://edu.sphero.com/program/16788325/edit
 
 async function startProgram() {
-	// Programmer: Billy Felton - Start Text & Audio Commit - Date: 4.30.2024
-		await scrollMatrixText('Start!', { r: 66, g: 56, b: 255 }, 15, true)
-		await speak("Start", true),
-		
+	// Programmer: Billy Felton - Start Text & Audio Commit - Date: 
+		await scrollMatrixText('Start!', { r: 66, g: 56, b: 255 }, 15, true),
+		await speak("Start", true);
 
 
 	// Programmer: Miles Shannon - Blue LED Checkpoint Commit - Date: 4.30.24
@@ -19,26 +18,29 @@ async function startProgram() {
 
 
 
-	// Programmer: Billy Felton - Sound One Checkpoint Commit - Date: 5.1.24
-			await roll (90, 55, 2),
+	// Programmer: Billy Felton - Sound One Checkpoint Commit - Date:5.1.24
+			await roll (90, 51, 2),
 			await delay(1),
 			await Sound.Effects.Laser.play(true);
-
 
 
 	// Programmer: Miles Shannon - Red LED Checkpoint Commit - Date: 5.1.24
 			await roll((getHeading() + 90), 40, 2),
 			await delay(1),
-			await roll((getHeading() + 30), 39 , 2),
+			await roll((getHeading() + 40), 39, 2),
 			await delay(1),
 		setMainLed({ r: 255, g: 0, b: 0 });
 
 
 
-	// Programmer:  - Sound TWo Checkpoint Commit - Date:
-
-
-
+	// Programmer: Billy Felton - Sound Two Checkpoint Commit - Date: 5.2.24
+			await roll((getHeading() - 90), 21, 2),
+			await delay(1),
+			await roll((getHeading() - 85), 40, 2),
+			await delay(1),
+			await roll((getHeading() + 85), 23, 2),
+			await Sound.Effects.Explosion.play(true);
+	
 	// Programmer:  - Green LED Checkpoint Commit - Date:
 
 
