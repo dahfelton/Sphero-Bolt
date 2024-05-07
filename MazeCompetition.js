@@ -60,4 +60,8 @@ async function startProgram() {
 
 
 
-	// Programmer:  - Finish Text & Audio Commit - Date:
+	/// Programmer: Miles Shannon - Finish Text & Audio Commit - Date:
+		await roll ((getHeading() + 40) , 35, 2),
+		await scrollMatrixText('Finish!', { r: 66, g: 56, b: 255 }, 15, true),
+		await speak("Finish", true);
+}
